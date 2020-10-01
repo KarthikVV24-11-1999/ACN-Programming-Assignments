@@ -1,0 +1,33 @@
+How To run:
+client:  ./script client <Port Number> <Host Name>
+server:  ./script server <Port Number>
+
+
+
+The directory contains the following files:
+ - udpserver.c
+ - udpclient.c
+ - script.sh
+ - Readme (this file)
+
+Udpserver.c:
+ - Contains the server side code
+ - Creates the executable called "server"
+ - Requires port no. as the only argument
+ - Has the functions: main, Sending, Receiving
+ - Socket is created and binded and a child process is created in the main function. Further, both the parent process and child process are to execute each of the Receiving and Sending functions respectively. Receiving function is called before the creation of child process to initialize the client side attributes.
+ - Sending function handles the sendto functionality and Receiving function handles the recvfrom functionality.
+
+Udpclient.c:
+ - Contains the client side code
+ - Creates the executable called "client"
+ - Requires port no. and server host name arguments
+ - Has the functions: main, Sending, Receiving
+ - Socket is created and binded and a child process is created in the main function. Further, both the parent process and child process are to execute each of the Receiving and Sending functions respectively.
+ - Sending function handles the sendto functionality and Receiving function handles the recvfrom functionality.
+
+script.sh:
+ - Contains the shell script to create the executables and to execute them based on the input.
+ - Argument1: 'client' or 'server'
+ - Argument2: Port Number
+ - Argument3: Host Name (only for client)
