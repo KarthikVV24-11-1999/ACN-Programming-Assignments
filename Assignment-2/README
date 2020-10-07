@@ -1,0 +1,14 @@
+How to run:
+Provide output file paths, metric and optimism manually:
+	./sample.sh <topology_file_path> <connections_file_path> <routingtable_file_path> <forwardingtable_file_path> <paths_file_path> <metric> <optimism>
+
+
+Provide only input file paths and obtain all outputs:
+	./script.sh <topology_file_path> <connections_file_path>
+
+Both the scripts sample.sh and script.sh run the python file run.py to obtain the outputs. In case of sample.sh, the outputs are created/rewritten as per the given file paths. In case of script.sh, the outputs are given names according to the metric and optimism and are placed in a folder called output. Do not remove the folder output at any time.
+
+Sample inputs:
+sample_inputs: Contains a small topology with 3 nodes and 3 edges and connections are 6
+sample_inputs_2: Contains the 14 node NSFNET and 24 node ARPANET topologies and connections of 100, 200 and 300 for each
+The outputs corresponding to each pair of topology and connections for NSFNET and ARPANET are placed in respective output folders.
